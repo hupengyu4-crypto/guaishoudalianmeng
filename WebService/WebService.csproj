@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2DC98AC3-C460-4B7C-8210-A413A5E5ED70}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebService</RootNamespace>
+    <AssemblyName>WebService</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <LangVersion>preview</LangVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress>true</Use64BitIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabases>true</PublishDatabases>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <IncludeIisSettings>false</IncludeIisSettings>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="NewConnection1-部署" Order="1" xmlns="">
+          <Destination Path="" />
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.Protobuf, Version=3.20.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Google.Protobuf.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Buffers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Memory.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="zlib.net, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\zlib.net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\BattleSystem\BattleDefineCfg.txt" />
+    <Content Include="Config\BattleSystem\BattleFighterCfg.txt" />
+    <Content Include="Config\BattleSystem\BattleSceneCfg.txt" />
+    <Content Include="Config\BattleSystem\BattleSkillCfg.txt" />
+    <Content Include="Config\BattleSystem\BattleTriggerCfg.txt" />
+    <Content Include="Config\BattleSystem\BattleTriggerDataCfg.txt" />
+    <Content Include="Config\BattleSystem\ConfigLevelVar.txt" />
+    <Content Include="Config\BattleSystem\Effect\AddDamageEffectCfg.txt" />
+    <Content Include="Config\BattleSystem\Effect\AddOtherEffectCfg.txt" />
+    <Content Include="Config\BattleSystem\Effect\AddPropEffectCfg.txt" />
+    <Content Include="Config\BattleSystem\Effect\AddRageEffectCfg.txt" />
+    <Content Include="Config\BattleSystem\Effect\BulletEffectCfg.txt" />
+    <Content Include="Config\BattleSystem\Effect\ClearEffectCfg.txt" />
+    <Content Include="Config\BattleSystem\Effect\DamageEffectCfg.txt" />
+    <Content Include="Config\BattleSystem\Effect\DelayEffectCfg.txt" />
+    <Content Include="Config\BattleSystem\Effect\ForwardMoveEffectCfg.txt" />
+    <Content Include="Config\BattleSystem\Effect\LuFeiBeiOneEffectCfg.txt" />
+    <Content Include="Config\BattleSystem\Effect\LuFeiBeiThreeEffectCfg.txt" />
+    <Content Include="Config\BattleSystem\Effect\LuFeiBeiTwoEffectCfg.txt" />
+    <Content Include="Config\BattleSystem\Effect\NoneEffectCfg.txt" />
+    <Content Include="Config\BattleSystem\Effect\UpEffectCfg.txt" />
+    <Content Include="Default.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\BattleSystem\Base\Cmd\AddFighterCmd.cs" />
+    <Compile Include="Scripts\BattleSystem\Base\Cmd\FireKillCommand.cs" />
+    <Compile Include="Scripts\BattleSystem\Base\Cmd\MakeDamageCmd.cs" />
+    <Compile Include="Scripts\BattleSystem\Base\Cmd\UseSkillCmd.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ApportionDamageEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ApportionDamageEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\CheckFighterEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\CheckFighterEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ComboEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ComboEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ConditionConsumeEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ConditionConsumeEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ConductionEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ConductionEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\DamageChangeEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\DamageChangeEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\DamageReduceEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\DamageReduceEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\DamageToPropertyEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\DamageToPropertyEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\DamageUpEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\DamageUpEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\DoLogic.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\DoLogicConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ImmuneDamage.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ImmuneDamageConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\KillEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\KillEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ReliveEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ReliveEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ResistEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ResistEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ShareDamageEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ShareDamageEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ShareVampireEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ShareVampireEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ShieldAbsorptionReflectiveEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ShieldAbsorptionReflectiveEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ShieldStealEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ShieldStealEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\SwitchTargetToAuthorEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\SwitchTargetToAuthorEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\TauntEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\TauntEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\TransferDamageEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\TransferDamageEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\TriggerEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\TriggerEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\UseSkillEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\UseSkillEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\CustomBattle\Bo3Battle\Bo3Battle.cs" />
+    <Compile Include="Scripts\BattleSystem\CustomBattle\BoBattle.cs" />
+    <Compile Include="Scripts\BattleSystem\CustomBattle\BossBattle\BossBattle.cs" />
+    <Compile Include="Scripts\BattleSystem\CustomBattle\FireBattle\FireAtkTeamData.cs" />
+    <Compile Include="Scripts\BattleSystem\CustomBattle\FireBattle\FireBattle.cs" />
+    <Compile Include="Scripts\BattleSystem\CustomBattle\KOFBattle\KOFBattle.cs" />
+    <Compile Include="Scripts\BattleSystem\CustomBattle\MassBattle\MassBattle.cs" />
+    <Compile Include="Scripts\BattleSystem\CustomBattle\MassBattle\MassTeamData.cs" />
+    <Compile Include="Scripts\BattleSystem\CustomBattle\PVPBattle\PVPBattle.cs" />
+    <Compile Include="Scripts\BattleSystem\CustomBattle\SoldierBattle\SoldierBattle.cs" />
+    <Compile Include="Scripts\BattleSystem\Event\ShieldParams.cs" />
+    <Compile Include="Scripts\BattleSystem\Pool\RingBuffer.cs" />
+    <Compile Include="Scripts\Config\ConfigHashCodeDefine.cs" />
+    <Compile Include="Scripts\Log\Log.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\BattleSystem\Base\BaseBattle.cs" />
+    <Compile Include="Scripts\BattleSystem\Base\BattleObject.cs" />
+    <Compile Include="Scripts\BattleSystem\Base\Cmd\BattleCommand.cs" />
+    <Compile Include="Scripts\BattleSystem\Base\Cmd\BattleCommandHandler.cs" />
+    <Compile Include="Scripts\BattleSystem\Base\Effect\BaseEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Base\Effect\EffectSys.cs" />
+    <Compile Include="Scripts\BattleSystem\BattleInfo\BattleInfoSys.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\BaseEffectCfg.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\BattleDefineCfg.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\BattleFighterCfg.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\BattleSceneCfg.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\BattleSkillCfg.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\AddStateEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\AddStateEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\CheckBlockEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\CheckBlockEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\CheckEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\CheckEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\CheckEventEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\CheckEventEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\CheckPropertyEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\CheckPropertyEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\CheckStateEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\CheckStateEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ClearEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ClearEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ClearStateEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ClearStateEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\DamageEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\DamageEffectCfg.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\FindTargetEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\FindTargetEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\HealEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\HealEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ProbabilityEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ProbabilityEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\PropertyEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\PropertyEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ReplaceEndEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ReplaceEndEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ReplaceSkillEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ReplaceSkillEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ShieldAddEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ShieldAddEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ShieldRemoveEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\ShieldRemoveEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\VampireEffect.cs" />
+    <Compile Include="Scripts\BattleSystem\Config\Effect\VampireEffectConfig.cs" />
+    <Compile Include="Scripts\BattleSystem\CustomBattle\Fighter\Fighter.cs" />
+    <Compile Include="Scripts\BattleSystem\CustomBattle\Fighter\FighterData.cs" />
+    <Compile Include="Scripts\BattleSystem\CustomBattle\NormalBattle\NormalBattle.cs" />
+    <Compile Include="Scripts\BattleSystem\CustomBattle\NormalBattle\NormalTeamData.cs" />
+    <Compile Include="Scripts\BattleSystem\CustomBattle\Skill\BattleSkill.cs" />
+    <Compile Include="Scripts\BattleSystem\Define\BattleDefine.cs" />
+    <Compile Include="Scripts\BattleSystem\Event\BattleEvent.cs" />
+    <Compile Include="Scripts\BattleSystem\Event\DamageParams.cs" />
+    <Compile Include="Scripts\BattleSystem\Event\EventParams.cs" />
+    <Compile Include="Scripts\BattleSystem\Event\FighterStateParams.cs" />
+    <Compile Include="Scripts\BattleSystem\Event\HealParams.cs" />
+    <Compile Include="Scripts\BattleSystem\Event\IEvent.cs" />
+    <Compile Include="Scripts\BattleSystem\Event\IEventParams.cs" />
+    <Compile Include="Scripts\BattleSystem\Event\PropParams.cs" />
+    <Compile Include="Scripts\BattleSystem\Math\Int2.cs" />
+    <Compile Include="Scripts\BattleSystem\Math\Int3.cs" />
+    <Compile Include="Scripts\BattleSystem\Math\Int4.cs" />
+    <Compile Include="Scripts\BattleSystem\Math\YKAABB2d.cs" />
+    <Compile Include="Scripts\BattleSystem\Math\YKAABB2f.cs" />
+    <Compile Include="Scripts\BattleSystem\Math\YKAABB3d.cs" />
+    <Compile Include="Scripts\BattleSystem\Math\YKCollision.cs" />
+    <Compile Include="Scripts\BattleSystem\Math\YKMath.cs" />
+    <Compile Include="Scripts\BattleSystem\Math\YKMatrix4X4.cs" />
+    <Compile Include="Scripts\BattleSystem\Math\YKQuaternion.cs" />
+    <Compile Include="Scripts\BattleSystem\Math\YKTransform.cs" />
+    <Compile Include="Scripts\BattleSystem\Math\YKVector2d.cs" />
+    <Compile Include="Scripts\BattleSystem\Math\YKVector2f.cs" />
+    <Compile Include="Scripts\BattleSystem\Math\YKVector3d.cs" />
+    <Compile Include="Scripts\BattleSystem\Math\YKVector3f.cs" />
+    <Compile Include="Scripts\BattleSystem\Pool\AnyObjectPool.cs" />
+    <Compile Include="Scripts\BattleSystem\Pool\IObjectPool.cs" />
+    <Compile Include="Scripts\BattleSystem\Utils\Base\BaseRandom.cs" />
+    <Compile Include="Scripts\BattleSystem\Utils\BattleUtils.cs" />
+    <Compile Include="Scripts\BattleSystem\Utils\CallbackDef.cs" />
+    <Compile Include="Scripts\BattleSystem\Utils\CollectionForeachSyncUtility.cs" />
+    <Compile Include="Scripts\BattleSystem\Utils\FastIterationDictionary.cs" />
+    <Compile Include="Scripts\BattleSystem\Utils\YKRandom.cs" />
+    <Compile Include="Scripts\BattleSystem\Utils\YKUtils.cs" />
+    <Compile Include="Scripts\BattleWeb.cs" />
+    <Compile Include="Scripts\Core\BinaryExpand.cs" />
+    <Compile Include="Scripts\Core\Config.cs" />
+    <Compile Include="Scripts\Core\ConfigBytesDataLoadMgr.cs" />
+    <Compile Include="Scripts\Core\ConfigManagerImpl.cs" />
+    <Compile Include="Scripts\Core\ConfigManagerNew.cs" />
+    <Compile Include="Scripts\Core\IConfigLoader.cs" />
+    <Compile Include="Scripts\Core\ISerializeable.cs" />
+    <Compile Include="Scripts\Core\ReadonlyArray.cs" />
+    <Compile Include="Scripts\Core\SerializeUtils.cs" />
+    <Compile Include="Scripts\Core\StringHelper.cs" />
+    <Compile Include="Scripts\Core\StringUtils.cs" />
+    <Compile Include="Scripts\ProtoBuff\PubFighter.cs" />
+    <Compile Include="Scripts\ProtoBuff\PubProp.cs" />
+    <Compile Include="Scripts\ProtoBuff\PubProto.cs" />
+    <Compile Include="Scripts\ProtoBuf\PbManager.cs" />
+    <Compile Include="Scripts\Register\GameConfigRegister.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LogError\" />
+    <Folder Include="Log\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="bin\Google.Protobuf.dll" />
+    <Analyzer Include="bin\System.Buffers.dll" />
+    <Analyzer Include="bin\System.Memory.dll" />
+    <Analyzer Include="bin\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Analyzer Include="bin\zlib.net.dll" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61205</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://Localhost:8000/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://Localhost:8000/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://Localhost:8000/</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

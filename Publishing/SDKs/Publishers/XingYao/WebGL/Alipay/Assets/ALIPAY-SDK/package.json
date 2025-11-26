@@ -1,0 +1,7 @@
+{
+  "displayName": "AlipaySDK",
+  "name": "com.alipay.alipaysdk",
+  "version": "0.0.10",
+  "description": "Alipay Unity Develop SDK",
+  "sdkDownloadURL": "https://mdn.alipayobjects.com/paladin_unity/uri/file/as/AlipaySDKPackage"
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Localization",
+    "rootNamespace": "Localization",
+    "references": [
+        "GUID:1f2e520be811b434d97d02a420d1347c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,28 @@
+﻿##############################################################
+
+1、cmd输入ipconfig获取ip地址192.168.2.42
+
+2、修改WebService\.vs\config\applicationhost中的binding protocol由"*:8000:localhost"改为"*:8081:192.168.2.42"
+	快速定位方法:启动webserver,然后在自动打开IIS(右下角小图标),右键显示所有应用程序,选中已启动的应用程序,点击下方的配置路径,即可找到applicationhost.config配置
+
+3、以管理员运行CMD 命令cmd	netsh http add urlacl url=http://192.168.2.42:8081/ user=everyone
+
+这是删除：netsh http delete urlacl url=http://192.168.2.42:8081/
+y
+4、修改win10防火墙入站规则增加TCP 8081入站，（控制面板-防火墙-高级设置）
+
+5、在GM工具上修改战斗服指向地址到192.168.2.42:8081
+
+##############################################################
+
+以下是web更新流程,需要更新的操作有:
+更改BattleSystem,重新生成dll;
+
+
+改动任意战斗配置(Config/BattleSystem).
+
+1、执行<自动同步最新战斗数据.bat>
+
+2、提交WebService到SVN
+
+3、打开GM管理系统→选择服务器→服务器管理→服务器热更→web热更→选择服务器→提交

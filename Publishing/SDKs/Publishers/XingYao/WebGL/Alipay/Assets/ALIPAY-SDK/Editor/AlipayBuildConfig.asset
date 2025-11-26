@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f2ce8b7ebb944cd975c2cc259213d0, type: 3}
+  m_Name: AlipayBuildConfig
+  m_EditorClassIdentifier: 
+  AlipayProjectCfg:
+    AppID: 2060170000362556
+    DataFileLoadType: 0
+    CDN: http://192.168.201.71:9897/pengrui/res
+    ProjectName: jueshitianfu-alipay_android_xcx_1
+    DerivedPath: D:/Project-TD/SANGUO/HD/Online/output/app/WebGL/XingYao_Alipay_0.0.3_20250303_1053
+    MemorySize: 256
+    Orientation: 0
+    LoadingImage: {fileID: 2800000, guid: 73dedf0d7e0cbc14f80da742cb7b6cd6, type: 3}
+    BundleHashLength: 32
+    CacheableFileIdentifier: StreamingAssets;
+    ExcludeFileIdentifier: json;
+    UseDataZip: 0
+  CompileOptions:
+    DevelopBuild: 0
+    AutoProfile: 0
+    ScriptOnly: 0
+    Il2CppOptimizeSize: 1
+    profilingFuncs: 0
+    Webgl2: 0
+    UseStreamingAssets: 1
+    ProfilingMemory: 0
+    CleanBuild: 0

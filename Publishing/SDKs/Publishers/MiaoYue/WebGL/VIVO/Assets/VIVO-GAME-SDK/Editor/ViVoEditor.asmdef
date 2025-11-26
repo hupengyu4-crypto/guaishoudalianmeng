@@ -1,0 +1,18 @@
+{
+    "name": "ViVoEditor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8bed93d4012278e4c90d3e40e4722e64"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
